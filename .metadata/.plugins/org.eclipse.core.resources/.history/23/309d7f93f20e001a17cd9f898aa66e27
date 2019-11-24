@@ -1,0 +1,27 @@
+<%@page import="com.DEStore.dao.DataAccess" %>
+<%@page import="com.DEStore.model.Product" %>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>JSP Page</title>
+</head>
+<body> 
+	<%
+		boolean loyal;
+		String name = request.getParameter("name");
+		String description = request.getParameter("description");
+		String priceTem = request.getParameter("price");
+		float price = Float.valueOf(priceTem);
+		String stockTem = request.getParameter("stock");
+		int stock = Integer.valueOf(stockTem);
+		
+		
+		Product c = new Product(0, name, description, price, stock);
+		out.print(c);
+		DataAccess da = new DataAccess();
+		da.addProduct(c);
+		
+		response.sendRedirect("AllProduct");
+	%>
+</body>
+</html>

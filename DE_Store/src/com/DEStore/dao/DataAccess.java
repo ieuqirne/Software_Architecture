@@ -2,6 +2,7 @@ package com.DEStore.dao;
 
 import com.DEStore.dao.DBUtils;
 import com.DEStore.model.Customer;
+import com.DEStore.model.Product;
 import com.sun.istack.internal.logging.Logger;
 
 import java.sql.PreparedStatement;
@@ -13,6 +14,7 @@ import java.util.logging.Level;
 
 public class DataAccess {
 
+	//Working Login
 	public boolean checkLogin(String uname, String pass) throws ClassNotFoundException, SQLException {
 		
 		String sql = "Select * from user where uname = '" + uname +"' and pass = '" + pass + "'";
@@ -30,6 +32,7 @@ public class DataAccess {
 		
 		return false;
 	}
+	//Working Customer
 	public static List<Customer> getCustomerById(int id) {
 		List<Customer> ls = new LinkedList<>();
 		String sql = "select * from Customer where id = " + id;
@@ -107,6 +110,88 @@ public class DataAccess {
 	public void delete(int id) {
 		try {
 			String sql = "delete from customer where id = ?";
+			PreparedStatement ps = DBUtils.getPreparedStatement(sql);
+			ps.setInt(1, id);
+			ps.executeUpdate();
+		} catch (ClassNotFoundException | SQLException ex) {
+			Logger.getLogger(DataAccess.class.getName(), null).log(
+					Level.SEVERE, null, ex);
+		}
+	}
+	
+	//Working Products
+	public void addProduct(Product p) {
+
+		try {
+			PreparedStatement ps = DBUtils
+					.getPreparedStatement("Insert into Product (name, description,price,stock) Values (?,?,?,?)");
+			ps.setString(1, p.getName());
+			ps.setString(2, p.getDescription());
+			ps.setFloat(3, p.getPrice());
+			ps.setInt(4, p.getStock());
+			ps.executeUpdate();
+		} catch (ClassNotFoundException | SQLException ex) {
+			Logger.getLogger(DataAccess.class.getName(), null).log(
+					Level.SEVERE, null, ex);
+
+		}
+	}
+	public static List<Product> getAllProduct() {
+		List<Product> ls = new LinkedList<>();
+
+		try {
+			ResultSet rs = DBUtils.getPreparedStatement(
+					"Select * from product").executeQuery();
+			while (rs.next()) {
+				Product p = new Product(rs.getInt(1), rs.getString(2),
+						rs.getString(3), rs.getFloat(4), rs.getInt(5));
+				ls.add(p);
+			}
+		} catch (ClassNotFoundException | SQLException ex) {
+			Logger.getLogger(DataAccess.class.getName(), null).log(
+					Level.SEVERE, null, ex);
+
+		}
+		return ls;
+	}
+	public void editProduct(int id, String name, String description, float price,
+			int stock) {
+		try {
+			String sql = "update Product SET name = ?, description = ?, price = ?, stock = ?"
+					+ " where id = ?";
+			PreparedStatement ps = DBUtils.getPreparedStatement(sql);
+			ps.setString(1, name);
+			ps.setString(2, description);
+			ps.setFloat(3, price);
+			ps.setInt(4, stock);
+			ps.setInt(5, id);
+			ps.executeUpdate();
+		} catch (ClassNotFoundException | SQLException ex) {
+			Logger.getLogger(DataAccess.class.getName(), null).log(
+					Level.SEVERE, null, ex);
+		}
+
+	}
+	public static List<Product> getProductById(int id) {
+		List<Product> ls = new LinkedList<>();
+		String sql = "select * from product where id = " + id;
+		try {
+			ResultSet rs = DBUtils.getPreparedStatement(sql).executeQuery();
+			while (rs.next()) {
+				Product p = new Product(rs.getInt(1), rs.getString(2),
+						rs.getString(3), rs.getFloat(4), rs.getInt(5));
+				ls.add(p);
+			}
+		} catch (ClassNotFoundException | SQLException ex) {
+			Logger.getLogger(DataAccess.class.getName(), null).log(
+					Level.SEVERE, null, ex);
+		}
+
+		return ls;
+	}
+	public void DeleteProduct(int id) {
+		try {
+			String sql = "delete from product where id = ?";
 			PreparedStatement ps = DBUtils.getPreparedStatement(sql);
 			ps.setInt(1, id);
 			ps.executeUpdate();

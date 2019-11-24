@@ -2,19 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-	function goBack() {
-		window.history.back()
-	}
-</script>
+<link href="StyleSheet.css" rel="stylesheet">
 <meta charset="ISO-8859-1">
 <title>Add Customer</title>
 </head>
 <body>
 	<h1>Add Customer</h1>
 	<form action=ManagerAddCustomer.jsp method="post">
-		<table
-			style="background-color: skyblue; margin-left: 20px; margin-left: 20px;">
+		<table class="table">
 			<tr>
 				<td>Name:</td>
 				<td><input type="text" name="name" style="width: 200px"></td>
@@ -39,9 +34,9 @@
 			</tr>
 		</table>
 	</form>
-	<div class="buttons-container">
+	<div style="margin-left:20px;" class="buttons-container" >
 		<br> <br>
-		<button onclick="goBack()">Go Back</button>
+		<a class="button" href="/DE_Store/welcome.jsp">Go Back</a>
 	</div>
 	<!--  Complete Interface addCustomer. -->
 </body>

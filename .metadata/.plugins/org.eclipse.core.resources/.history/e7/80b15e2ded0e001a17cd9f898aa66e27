@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function goBack() {
+		window.history.back()
+	}
+</script>
+<meta charset="ISO-8859-1">
+<title>Add Customer</title>
+</head>
+<body>
+	<h1>Add Customer</h1>
+	<form action=ManagerAddCustomer.jsp method="post">
+		<table border = 1
+			style="background-color: skyblue; margin-left: 20px; margin-left: 20px;">
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" name="name" style="width: 200px"></td>
+			</tr>
+			<tr>
+				<td>Surname:</td>
+				<td><input type="text" name="surname" style="width: 200px"></td>
+			</tr>
+			<tr>
+				<td>Address:</td>
+				<td><input type="text" name="address" style="width: 200px"></td>
+			</tr>
+			<tr>
+				<td>Loyalty Card</td>
+				<td><select name="loyalty">
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Add Customer"></td>
+			</tr>
+		</table>
+	</form>
+	<div class="buttons-container" margin-left: 20px; margin-left: 20px;>
+		<br> <br>
+		<button onclick="goBack()">Go Back</button>
+	</div>
+	<!--  Complete Interface addCustomer. -->
+</body>
+</html>

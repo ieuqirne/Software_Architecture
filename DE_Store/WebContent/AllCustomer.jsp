@@ -3,18 +3,13 @@
 <!DOCTYPE html PUBLIC "-/ /W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<script>
-	function goBack() {
-		window.history.back()
-	}
-</script>
+<link href="StyleSheet.css" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>All Customers</title>
 </head>
 <body>
 	<h1>All Customer</h1>
-	<table border=1
-		style="background-color: skyblue; margin-left: 20px; margin-left: 20px;">
+	<table class="table">
 		<tr align="left">
 			<th>ID</th>
 			<th>Name</th>
@@ -35,8 +30,8 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<div class="buttons-container">
+	<div style="margin-left: 20px;" class="buttons-container">
 		<br> <br>
-		<button onclick="goBack()">Go Back</button>
+		<a class="button" href="/DE_Store/welcome.jsp">Go Back</a>
 	</div>
 </body>

@@ -24,7 +24,7 @@
 	<div class="buttons-container">
 		<a href="/DE_Store/addCustomer.html" class="w3-btn w3-black">Add Customer</a> 
 		<a href="AllCustomer" class="w3-btn w3-black">Customer Listed</a> 
-		<a href="#" class="w3-btn w3-black">Inventory Control</a>
+		<a href="AllProduct" class="w3-btn w3-black">Inventory Control</a>
 		<a href="#" class="w3-btn w3-black">Finance Aproval</a> 
 		<a href="#"	class="w3-btn w3-black">Reports and Analysis</a>
 	</div>
