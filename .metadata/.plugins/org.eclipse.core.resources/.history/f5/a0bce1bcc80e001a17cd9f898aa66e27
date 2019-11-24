@@ -1,0 +1,20 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Customer</title>
+</head>
+<body>
+	<h1>Add Customer</h1>
+	<form action=ManagerAddCustomer.jsp method="post">
+		<table style="background-color: skyblue; margin-left: 20px; margin-left: 20px;">	
+			<tr><td>Name:</td><td><input type="text" name="name" style="width: 200px"></td></tr>
+			<tr><td>Surname:</td><td><input type="text" name="surname" style="width: 200px"></td></tr>
+			<tr><td>Address:</td><td><input type="text" name="address" style="width: 200px"></td></tr>
+			<tr><td>Loyalty Card</td><td><input type="checkbox" name="loyalty"></td></tr>
+			<tr><td><input type="submit" value="Submit"></td></tr>
+		</table>
+	</form>
+	<!--  Complete Interface addCustomer. -->
+</body>
+</html>

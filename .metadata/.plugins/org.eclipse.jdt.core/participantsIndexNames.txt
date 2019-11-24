@@ -1,0 +1,3 @@
+INDEX VERSION 1.126
+C:\Users\enrik\OneDrive\Escritorio\Year_4\SET10101-Software_Architecture\workspaces\DE_Store\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2747064225.index
+\DE_Store\src
