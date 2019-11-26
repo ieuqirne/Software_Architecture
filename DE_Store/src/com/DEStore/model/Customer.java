@@ -5,7 +5,22 @@ public class Customer {
 	private String name;
 	private String surname;
 	private String address;
+	private String email;
+	private boolean loyalty;
+	private boolean active;
 	
+	public Customer(int id, String name, String surname, String address,
+			String email, boolean loyalty, boolean active) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.surname = surname;
+		this.address = address;
+		this.email = email;
+		this.loyalty = loyalty;
+		this.active = active;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -38,22 +53,28 @@ public class Customer {
 		this.address = address;
 	}
 
-	public String getLoyalty() {
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public boolean isLoyalty() {
 		return loyalty;
 	}
 
-	public void setLoyalty(String loyalty) {
+	public void setLoyalty(boolean loyalty) {
 		this.loyalty = loyalty;
 	}
 
-	private String loyalty;
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
 	
-	public Customer(int id,String name, String surname, String address, String loyalty) {
-		this.id = id;
-		this.name = name;
-		this.surname = surname;
-		this.address = address;
-		this.loyalty = loyalty;
-	}
-
 }

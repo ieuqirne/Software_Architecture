@@ -6,15 +6,21 @@ public class Product {
 	private String description;
 	private Float price;
 	private int stock;
+	private boolean threetwo;
+	private boolean oneone;
+	private boolean freeDelivery;
 	
 	public Product(int id, String name, String description, Float price,
-			int stock) {
+			int stock, boolean threetwo, boolean oneone, boolean freeDelivery) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.price = price;
 		this.stock = stock;
+		this.threetwo = threetwo;
+		this.oneone = oneone;
+		this.freeDelivery = freeDelivery;
 	}
 
 	public int getId() {
@@ -57,7 +63,29 @@ public class Product {
 		this.stock = stock;
 	}
 
-	
+	public boolean isThreetwo() {
+		return threetwo;
+	}
+
+	public void setThreetwo(boolean threetwo) {
+		this.threetwo = threetwo;
+	}
+
+	public boolean isOneone() {
+		return oneone;
+	}
+
+	public void setOneone(boolean oneone) {
+		this.oneone = oneone;
+	}
+
+	public boolean isFreeDelivery() {
+		return freeDelivery;
+	}
+
+	public void setFreeDelivery(boolean freeDelivery) {
+		this.freeDelivery = freeDelivery;
+	}
 	
 	
 }

@@ -1,0 +1,29 @@
+<%@page import="com.DEStore.dao.DataAccess"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <%
+            String idTemp = request.getParameter("id");
+            int id = Integer.parseInt(idTemp);
+            String name = request.getParameter("name");
+            String description = request.getParameter("description");
+            String priceTem = request.getParameter("price");
+            float price = Float.valueOf(priceTem);
+            String stockTem = request.getParameter("stock");
+			int stock = Integer.valueOf(stockTem);
+			
+			
+			
+			
+            DataAccess da = new DataAccess();
+            da.editProduct(id, name, description, price, stock);
+            
+            response.sendRedirect("AllProduct");
+        %>
+    </body>
+</html>

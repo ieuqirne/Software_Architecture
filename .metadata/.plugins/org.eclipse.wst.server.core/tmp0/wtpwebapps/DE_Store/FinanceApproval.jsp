@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script>
+	setTimeout(function() {
+		myFunction()
+	}, 2000);
+	
+	setTimeout(function() {
+		window.location.href = 'javascript:history.back()'
+	}, 3000);
+	
+	function myFunction() {
+		  alert('Finances Accepted');
+		}
+</script
+
+>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Finance Approval</title>
+</head>
+<body>
+	<div id="ac-wrapper">
+		<div id="popup">
+			<center>
+				<h2>Checking Finances of Client</h2>
+			</center>
+		</div>
+	</div>
+</body>
+</html>

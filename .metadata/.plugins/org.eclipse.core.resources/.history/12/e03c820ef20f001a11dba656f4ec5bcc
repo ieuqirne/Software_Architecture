@@ -1,0 +1,31 @@
+.button {
+	background-color: bluesky; 
+	padding: 3px 3px;
+	border-radius: 15px;
+  	color: black; 
+  	border: 2px solid grey;
+}
+
+.button:hover {
+  background-color: #05086C;
+  color: skyblue;
+}
+
+.button1 {
+	background-color: #050506; 
+	padding: 3px 3px;
+	border-radius: 15px;
+  	color: skyblue; 
+  	border: 2px solid grey;
+}
+
+.button1:hover {
+  background-color: #05086C;
+  color: skyblue;
+}
+.table{
+	background-color: skyblue; 
+	margin-left: 20px; 
+	margin-left: 20px;
+	border: 1px;
+}

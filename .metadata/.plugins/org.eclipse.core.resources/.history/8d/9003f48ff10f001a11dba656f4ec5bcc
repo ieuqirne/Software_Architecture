@@ -1,0 +1,27 @@
+.button {
+  display: inline-block;
+    padding: 8px 12px; 
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: skyblue;
+    font-size: 16px;
+    color: black;
+}
+
+.button1 {
+	background-color: #050506; 
+	border-radius: 15px;
+  	color: white; 
+  	border: 2px solid grey;
+}
+
+.button1:hover {
+  background-color: #05086C;
+  color: white;
+}
+.table{
+	background-color: skyblue; 
+	margin-left: 20px; 
+	margin-left: 20px;
+	border: 1px;
+}

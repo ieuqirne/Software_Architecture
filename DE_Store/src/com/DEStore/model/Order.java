@@ -1,0 +1,44 @@
+package com.DEStore.model;
+
+
+public class Order {
+	private int id;
+	private int customerID;
+	private float total;
+	private String date;
+	
+	public Order(int id, int customerID, float total, String date) {
+		super();
+		this.id = id;
+		this.customerID = customerID;
+		this.total = total;
+		this.date = date;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getCustomerID() {
+		return customerID;
+	}
+	public void setCustomerID(int customerID) {
+		this.customerID = customerID;
+	}
+	public float getTotal() {
+		return total;
+	}
+	public void setTotal(float total) {
+		this.total = total;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	
+	
+}

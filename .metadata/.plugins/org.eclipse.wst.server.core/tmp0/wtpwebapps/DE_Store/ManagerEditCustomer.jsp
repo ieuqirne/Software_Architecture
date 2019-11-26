@@ -8,15 +8,21 @@
     </head>
     <body>
         <%
+        	boolean loyalty;
             String idTemp = request.getParameter("id");
             int id = Integer.parseInt(idTemp);
             String name = request.getParameter("name");
             String surname = request.getParameter("surname");
             String address = request.getParameter("address");
-            String loyalty = request.getParameter("loyalty");
-
+            String email = request.getParameter("email");
+            String loyaltyTem = request.getParameter("loyalty");
+            if(loyaltyTem != null){
+            	loyalty = Boolean.TRUE;
+ 			}else{
+ 				loyalty = Boolean.FALSE;
+ 			}
             DataAccess da = new DataAccess();
-            da.edit(id, name, surname, address, loyalty);
+            da.edit(id, name, surname, address,email, loyalty);
             
             response.sendRedirect("AllCustomer");
         %>

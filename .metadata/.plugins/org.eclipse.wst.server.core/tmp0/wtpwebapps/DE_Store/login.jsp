@@ -12,15 +12,15 @@
 		<table
 			style="background-color: skyblue; margin-left: 20px; margin-left: 20px;">
 			<tr>
-				<td>Enter Username:</td>
+				<td>Enter Username: </td>
 				<td><input type="text" name="uname"></td>
 			</tr>
 			<tr>
-				<td>Enter Password:</td>
+				<td>Enter Password: </td>
 				<td><input type="password" name="pass"></td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="Login"></td>
+				<td><input class= "button-success pure-button" type="submit" value="Login"></td>
 			</tr>
 		</table>
 	</form>

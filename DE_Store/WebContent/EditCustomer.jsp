@@ -9,25 +9,44 @@
 </head>
 <body>
 	<h1>Edit Customer</h1>
-	<table  class="table"">
+	<form action="ManagerEditCustomer.jsp" method="post">
 		<c:forEach items="${getCustomerById}" var="p">
-			<form action="ManagerEditCustomer.jsp" method="post">
-				<input type="hidden" name="id" value="${p.id}"> Name:<br>
-				<input type="text" value="${p.name}" name="name"
-					style="width: 200px"><br> Surname:<br> <input
-					type="text" value="${p.surname}" name="surname"
-					style="width: 200px"><br> Address:<br> <input
-					type="text" value="${p.surname}" name="address"
-					style="width: 200px"><br> Loyalty Card: <select
-					name="loyalty">
-					<option value="${p.loyalty}">${p.loyalty}</option>
-					<option value="Yes">Yes</option>
-					<option value="No">No</option>
-				</select><br> <input type="submit" value="Update Customer">
-
-			</form>
+			
+			<table  class="table">
+				<tr>
+					<td><input type="hidden" name="id" value="${p.id}"></td><td></td>
+				</tr>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" value="${p.name}" name="name" style="width: 200px"></td>
+				</tr> 
+				<tr>
+					<td>Surname:</td>
+					<td><input	type="text" value="${p.surname}" name="surname"	style="width: 200px"></td> 
+				</tr> 
+				<tr>
+					<td>Address:</td>
+					<td><input	type="text" value="${p.address}" name="address"	style="width: 200px"></td>
+	 
+				</tr> 
+				<tr>
+					<td>Email:</td>
+					<td><input	type="text" value="${p.email}" name="email"	style="width: 200px"></td>
+	 
+				</tr> 
+				
+				<tr>
+					<td>Loyalty Card:</td>
+					<td><input type="checkbox" name="loyalty" value=1 <c:if test = "${p.loyalty}">
+         																			checked
+																				</c:if>>  </td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Update Customer"></td>
+				</tr>	
+			</table>	
 		</c:forEach>
-	</table>
+	</form>
 	<div style="margin-left: 20px;" class="buttons-container">
 		<br> <br>
 		<a class="button" href="/DE_Store/welcome.jsp">Go Back</a>

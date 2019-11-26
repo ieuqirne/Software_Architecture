@@ -7,7 +7,9 @@
 </head>
 <body> 
 	<%
-
+			boolean threetwo = Boolean.FALSE;
+			boolean oneone = Boolean.FALSE;
+			boolean freeDelivery = Boolean.FALSE;
  			String name = request.getParameter("name");
  			String description = request.getParameter("description");
  			String priceTem = request.getParameter("price");
@@ -24,8 +26,28 @@
  			}catch(NumberFormatException e){
  				stock = 0;
  			}
+ 			String threetwoTem = request.getParameter("threetwo");
+ 			if(threetwoTem != null){
+ 				threetwo = Boolean.TRUE;
+ 			}else{
+ 				threetwo = Boolean.FALSE;
+ 			}
  			
- 			Product p = new Product(0, name, description, price, stock);
+ 			String oneoneTem = request.getParameter("oneone");
+ 			if(oneoneTem != null){
+ 				oneone = Boolean.TRUE;
+ 			}else{
+ 				oneone = Boolean.FALSE;
+ 			}
+ 			
+ 			String freeDeliveryTem = request.getParameter("freeDelivery");
+ 			if(freeDeliveryTem != null){
+ 				freeDelivery = Boolean.TRUE;
+ 			}else{
+ 				freeDelivery = Boolean.FALSE;
+ 			}
+ 			
+ 			Product p = new Product(0, name, description, price, stock, threetwo, oneone, freeDelivery);
  			out.print(p);
  			DataAccess da = new DataAccess();
  			da.addProduct(p);

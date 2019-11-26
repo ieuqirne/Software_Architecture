@@ -24,14 +24,22 @@
 				<td>${p.name}</td>
 				<td>${p.surname}</td>
 				<td>${p.address}</td>
-				<td>${p.loyalty}</td>
-				<td><a href="edit?id=${p.id}">Edit</a> <a
-					href="delete?id=${p.id}">Delete</a></td>
+				<td><c:if test = "${!p.loyalty}">
+         				No
+      				</c:if>
+      				<c:if test = "${p.loyalty}">
+         				Yes
+      				</c:if>
+      			</td>
+				<td><a href="edit?id=${p.id}">Edit</a> 
+				<a href="delete?id=${p.id}">Delete</a>
+				<a href="Profile?id=${p.id}">See Profile</a></td>
 			</tr>
 		</c:forEach>
 	</table>
 	<div style="margin-left: 20px;" class="buttons-container">
 		<br> <br>
 		<a class="button" href="/DE_Store/welcome.jsp">Go Back</a>
+		<a class="button" href="/DE_Store/addCustomer.html" >Add Customer</a>
 	</div>
 </body>

@@ -7,14 +7,19 @@
 </head>
 <body> 
 	<%
-		boolean loyal;
+		boolean loyalty;
 		String name = request.getParameter("name");
 		String surname = request.getParameter("surname");
 		String address = request.getParameter("address");
-		String loyalty = request.getParameter("loyalty");
+		String email = request.getParameter("email");
+		String loyaltyTem = request.getParameter("loyalty");
+			if(loyaltyTem != null){
+				loyalty = Boolean.TRUE;
+			}else{
+				loyalty = Boolean.FALSE;
+			}
 		
-		
-		Customer c = new Customer(0, name, surname, address, loyalty);
+		Customer c = new Customer(0, name, surname, address, email, loyalty, Boolean.TRUE);
 		out.print(c);
 		DataAccess da = new DataAccess();
 		da.addCustomer(c);

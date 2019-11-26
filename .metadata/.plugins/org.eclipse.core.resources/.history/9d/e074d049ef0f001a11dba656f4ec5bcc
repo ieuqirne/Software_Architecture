@@ -1,0 +1,22 @@
+.button {
+  display: inline-block;
+    padding: 8px 12px; 
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: skyblue;
+    font-size: 16px;
+    color: black;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+}
+
+.table{
+	background-color: skyblue; 
+	margin-left: 20px; 
+	margin-left: 20px;
+	border: 1px;
+}

@@ -1,0 +1,11 @@
+package com.DEStore.model;
+
+
+public class Order {
+	private int id;
+	private int customerID;
+	private float total;
+	private String date;
+
+	
+}

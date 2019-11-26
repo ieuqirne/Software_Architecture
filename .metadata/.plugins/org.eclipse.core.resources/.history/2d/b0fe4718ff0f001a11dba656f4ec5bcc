@@ -1,0 +1,5 @@
+package com.DEStore.model;
+
+public class Order {
+
+}

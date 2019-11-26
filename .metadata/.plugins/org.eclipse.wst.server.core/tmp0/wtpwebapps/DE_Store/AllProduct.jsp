@@ -16,6 +16,9 @@
 			<th>Description</th>
 			<th>Price</th>
 			<th>Stock</th>
+			<th>3x2</th>
+			<th>Buy1Get1</th>
+			<th>Free Delivery</th>
 			<th></th>
 		</tr>
 		<c:forEach items="${AllProduct}" var="p">
@@ -25,14 +28,37 @@
 				<td>${p.description}</td>
 				<td>${p.price}</td>
 				<td>${p.stock}</td>
+				<td><c:if test = "${!p.threetwo}">
+         				No
+      				</c:if>
+      				<c:if test = "${p.threetwo}">
+         				Yes
+      				</c:if>
+      			</td>
+				<td><c:if test = "${!p.oneone}">
+         				No
+      				</c:if>
+      				<c:if test = "${p.oneone}">
+         				Yes
+      				</c:if>
+      			</td>
+				<td><c:if test = "${!p.freeDelivery}">
+         				No
+      				</c:if>
+      				<c:if test = "${p.freeDelivery}">
+         				Yes
+      				</c:if>
+      			</td>
 				<td><a href="EditProduct?id=${p.id}">Edit</a> 
 				<a href="DeleteProduct?id=${p.id}">Delete</a></td>
+				
 			</tr>
 		</c:forEach>
 	</table>
 	<div style="margin-left: 20px;" class="buttons-container">
 		<br> <br>
 		<a class="button" href="/DE_Store/welcome.jsp">Go Back</a>
+		<a class="button" href="/DE_Store/AddProduct.jsp" >Add Product</a>
 		
 	</div>
 </body>
