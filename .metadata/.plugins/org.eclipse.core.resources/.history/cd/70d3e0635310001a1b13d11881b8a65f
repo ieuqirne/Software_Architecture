@@ -1,0 +1,43 @@
+package com.DEStore.model;
+
+public class Report {
+	private int id;
+	private int customerID;
+	private float price;
+	private String date;
+	
+	public Report(int id, int customerID, float price, String date) {
+		super();
+		this.id = id;
+		this.customerID = customerID;
+		this.price = price;
+		this.date = date;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getCustomerID() {
+		return customerID;
+	}
+	public void setCustomerID(int customerID) {
+		this.customerID = customerID;
+	}
+	public float getPrice() {
+		return price;
+	}
+	public void setPrice(float price) {
+		this.price = price;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	
+	
+}

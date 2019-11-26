@@ -2,8 +2,8 @@ package com.DEStore.dao;
 
 import com.DEStore.dao.DBUtils;
 import com.DEStore.model.Customer;
-import com.DEStore.model.Order;
 import com.DEStore.model.Product;
+import com.DEStore.model.Report;
 import com.sun.istack.internal.logging.Logger;
 
 import java.sql.PreparedStatement;
@@ -221,16 +221,17 @@ public class DataAccess {
 	}
 	
 	//Working Orders
-	public static List<Order> getAllOrder() {
-		List<Order> ls = new LinkedList<>();
-
+	public static List<Report> getAllReport() {
+		List<Report> ls = new LinkedList<>();
 		try {
+
 			ResultSet rs = DBUtils.getPreparedStatement(
-					"Select * from order").executeQuery();
+					"SELECT * FROM `order` WHERE 1").executeQuery();
+
 			while (rs.next()) {
-				Order p = new Order(rs.getInt(1), rs.getInt(2),
+				Report n = new Report(rs.getInt(1), rs.getInt(2),
 						rs.getFloat(3), rs.getString(4));
-				ls.add(p);
+				ls.add(n);
 			}
 		} catch (ClassNotFoundException | SQLException ex) {
 			Logger.getLogger(DataAccess.class.getName(), null).log(

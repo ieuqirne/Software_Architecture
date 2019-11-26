@@ -26,7 +26,7 @@
 		<a href="AllCustomer" class="w3-btn w3-black">Customer Listed</a>
 		<a href="/DE_Store/AddProduct.jsp" class="w3-btn w3-black">Add Product</a> 
 		<a href="AllProduct" class="w3-btn w3-black">Inventory Control</a>
-		<a href="#"	class="w3-btn w3-black">Reports and Analysis</a>
+		<a href="AllReport"	class="w3-btn w3-black">Reports and Analysis</a>
 	</div>
 	<div class="buttons-container">
 	<br><br>
