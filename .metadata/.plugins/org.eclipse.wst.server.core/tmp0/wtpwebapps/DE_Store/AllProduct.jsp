@@ -5,11 +5,11 @@
 <head>
 <link href="StyleSheet.css" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>All Products</title>
+<title>Inventory Control</title>
 </head>
 <body>
-	<h1>All Products</h1>
-	<table class="table">
+	<h1>Inventory Control</h1>
+	<table class="table"  border= "1"  width = "700px" >
 		<tr align="left">
 			<th>ID</th>
 			<th>Name</th>

@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Welcome Page</title>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="StyleSheet.css" rel="stylesheet">
 </head>
 <body>
 	<%
@@ -20,13 +20,13 @@
 			response.sendRedirect("login.jsp");
 		}
 	%>
-	<h1>Welcome ${username}</h1>
+	<h1 style="color:#05086C" >Welcome ${username}</h1>
 	<div class="buttons-container">
-		<a href="/DE_Store/addCustomer.html" class="w3-btn w3-black">Add Customer</a> 
-		<a href="AllCustomer" class="w3-btn w3-black">Customer Listed</a>
-		<a href="/DE_Store/AddProduct.jsp" class="w3-btn w3-black">Add Product</a> 
-		<a href="AllProduct" class="w3-btn w3-black">Inventory Control</a>
-		<a href="AllReport"	class="w3-btn w3-black">Reports and Analysis</a>
+		<a href="/DE_Store/addCustomer.html" class="button">Add Customer</a> 
+		<a href="AllCustomer" class="button">Customer Listed</a>
+		<a href="/DE_Store/AddProduct.jsp" class="button">Add Product</a> 
+		<a href="AllProduct" class="button">Inventory Control</a>
+		<a href="AllReport"	class="button">Reports and Analysis</a>
 	</div>
 	<div class="buttons-container">
 	<br><br>

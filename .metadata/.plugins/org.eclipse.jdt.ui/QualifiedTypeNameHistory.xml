@@ -2,7 +2,7 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.DEStore.model.Order"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
 <fullyQualifiedTypeName name="com.DEStore.model.Report"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
 </qualifiedTypeNameHistroy>

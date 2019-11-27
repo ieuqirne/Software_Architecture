@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,7 +16,7 @@ import com.DEStore.dao.DataAccess;
 public class AllReport extends HttpServlet {
 
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException{
+			throws ServletException, IOException, ClassNotFoundException, SQLException{
 		request.setAttribute("AllReport", DataAccess.getAllReport());
 		RequestDispatcher rd = request.getRequestDispatcher("AllReport.jsp");
 		rd.forward(request,response);
@@ -23,13 +24,23 @@ public class AllReport extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+			processRequest(request, response);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+			processRequest(request, response);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     
     @Override

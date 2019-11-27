@@ -221,23 +221,21 @@ public class DataAccess {
 	}
 	
 	//Working Orders
-	public static List<Report> getAllReport() {
+	public static List<Report> getAllReport() throws ClassNotFoundException, SQLException {
 		List<Report> ls = new LinkedList<>();
-		try {
 
-			ResultSet rs = DBUtils.getPreparedStatement(
-					"SELECT * FROM `order` WHERE 1").executeQuery();
+			ResultSet rs = DBUtils.getPreparedStatement( "SELECT date, Sum(total) total, "
+					+ "count(total) as count, ROUND(AVG(total),2) AS AveragePrice, DAYOFWEEK(datE) "
+					+ "AS DAYOFWEEK FROM `order` group by YEAR(date), MONTH(date), DAY(date) "
+					+ " order by date DESC").executeQuery();
+
 
 			while (rs.next()) {
-				Report n = new Report(rs.getInt(1), rs.getInt(2),
-						rs.getFloat(3), rs.getString(4));
+				Report n = new Report(rs.getDate(1), rs.getFloat(2),
+						rs.getInt(3), rs.getFloat(4), rs.getInt(5));
 				ls.add(n);
 			}
-		} catch (ClassNotFoundException | SQLException ex) {
-			Logger.getLogger(DataAccess.class.getName(), null).log(
-					Level.SEVERE, null, ex);
 
-		}
 		return ls;
 	}
 }

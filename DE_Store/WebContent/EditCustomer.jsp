@@ -5,7 +5,7 @@
 <head>
 <link href="StyleSheet.css" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Edit</title>
+<title>Edit Customer</title>
 </head>
 <body>
 	<h1>Edit Customer</h1>
@@ -42,7 +42,7 @@
 																				</c:if>>  </td>
 				</tr>
 				<tr>
-					<td><input type="submit" value="Update Customer"></td>
+					<td></td><td align="right"><input type="submit" value="Update Customer"></td>
 				</tr>	
 			</table>	
 		</c:forEach>

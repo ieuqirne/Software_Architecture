@@ -1,43 +1,63 @@
 package com.DEStore.model;
 
+import java.sql.Date;
+
 public class Report {
-	private int id;
-	private int customerID;
+	private Date date;
 	private float total;
-	private String date;
+	private int countTotal;
+	private float average;
+	private int dayWeek;
 	
-	public Report(int id, int customerID, float total, String date) {
+	public Report(Date date, float total,
+			int countTotal, float average, int dayWeek) {
 		super();
-		this.id = id;
-		this.customerID = customerID;
+		this.date = date;
 		this.total = total;
+		this.countTotal = countTotal;
+		this.average = average;
+		this.dayWeek = dayWeek;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setYear(Date date) {
 		this.date = date;
 	}
-	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public int getCustomerID() {
-		return customerID;
-	}
-	public void setCustomerID(int customerID) {
-		this.customerID = customerID;
-	}
+
 	public float getTotal() {
 		return total;
 	}
+
 	public void setTotal(float total) {
 		this.total = total;
 	}
-	public String getDate() {
-		return date;
+
+	public int getCountTotal() {
+		return countTotal;
 	}
-	public void setDate(String date) {
-		this.date = date;
+
+	public void setCountTotal(int countTotal) {
+		this.countTotal = countTotal;
 	}
+
+	public float getAverage() {
+		return average;
+	}
+
+	public void setAverage(float average) {
+		this.average = average;
+	}
+
+	public int getDayWeek() {
+		return dayWeek;
+	}
+
+	public void setDayWeek(int dayWeek) {
+		this.dayWeek = dayWeek;
+	}	
 	
-	
+
 }

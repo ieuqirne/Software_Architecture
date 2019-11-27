@@ -64,7 +64,7 @@
 																				</c:if>>  </td>
 				</tr>
 				<tr>
-					<td><input type="submit" value="Update Product" onClick="return checkStock();"></td>
+					<td></td><td align="right"><input type="submit" value="Update Product" onClick="return checkStock();"></td>
 				</tr>	
 			</table>
 			</form>
