@@ -7,10 +7,16 @@
 	function checkStock(){
 		var stock = document.editProduct.stock.value;
 		if( stock < 50){
-			confirm('Low Stock, the system has generated an order to central inventory');
-			edit.Product.submit();
+			var result = confirm('Low Stock, the system has generated an order to central inventory');
+			if(result)
+			{
+				edit.Product.submit();
+			}else{
+				return false;
+			}
+			
 		}else{
-			return false;
+			return true;
 		}
 	}
 </script>
